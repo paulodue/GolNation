@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="navHome"
+        android:icon="@drawable/homeicon"/>
+    <item android:title="Santos"
+        android:id="navSantos"
+        android:icon="@drawable/santos"/>
+    <item android:title="Real"
+        android:id="navReal"
+        android:icon="@drawable/real"/>
+</menu>

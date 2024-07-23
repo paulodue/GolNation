@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Assignment3-GroupC</string>
+    <string name="login">Hi buddy!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_here_register_now">New here? REGISTER NOW!</string>
+    <string name="register">Register now, it is FREE!</string>
+    <string name="already_have_an_account_go_to_login">Already have an account? Go to Login!</string>
+    <string name="registerbtn">Register!</string>
+    <string name="logout">Logout</string>
+    <string name="loginBtn">Login</string>
+    <string name="MainMessage_mainact">Click on the Teams logo to go to Team Infos</string>
+    <string name="reallogo">realLogo</string>
+    <string name="santoslogo">santoslogo</string>
+    <string name="flalogo">flalogo</string>
+    <string name="santos_fc">Santos Futebol Clube</string>
+    <string name="team_informations">Team Informations</string>
+    <string name="separationLine">-----------------------------------------------------------------------------------------------------</string>
+    <string name="select_an_year">Select an year</string>
+    <string name="match_history">Match history</string>
+    <string name="clube_de_regatas_do_flamengo">Clube de Regatas do Flamengo</string>
+    <string name="foundationFla">Foundation: 1895</string>
+    <string name="foundationSantos">Foundation: 1912</string>
+    <string name="foundationReal">Foundation: 1902</string>
+    <string name="footbuddy_logo">footbuddy Logo</string>
+    <string name="real_madrid_club_de_f_tbol">Real Madrid Club de Fútbol</string>
+    <string name="api_info">API INFO</string>
+    <string name="go_to_main_menu">Go to Main Menu</string>
+</resources>
