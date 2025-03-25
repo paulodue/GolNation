@@ -1,4 +1,4 @@
-package com.example.assignment3_groupc
+package com.example.golnation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

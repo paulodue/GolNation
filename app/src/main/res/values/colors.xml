@@ -4,7 +4,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#77F289</color>
     <color name="grey">#808080</color>
-    <color name="green2">#5F9EA0</color>
+    <color name="green2">#36454F</color>
     <color name="purple">#E7D3F1</color>
     <color name="red">#ff6666</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="grey_dark">#616161</color>
+    <color name="red_dark">#3F51B5</color>
+    <color name="table_row_odd">#F5F5F5</color>
+    <color name="table_row_even">#FFFFFF</color>
 </resources>

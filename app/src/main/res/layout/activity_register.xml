@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register"
@@ -11,65 +11,83 @@
     tools:context=".Register"
     android:background="#1F1F1F">
 
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="267dp"
         android:layout_height="187dp"
-        app:srcCompat="@drawable/footbuddy" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/golNationLogo" />
 
     <TextView
         android:id="@+id/register_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:text="@string/register"
         android:textColor="@color/white"
-        android:textSize="30sp" />
-
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/email_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_text" />
 
     <EditText
         android:id="@+id/password_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="textPassword"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext" />
 
     <Button
-        app:backgroundTint="@null"
-        android:background="@drawable/rounded_button"
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/registerbtn"
         android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_edittext" />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/goToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:paddingTop="15dp"
-        android:text="@string/already_have_an_account_go_to_login" />
+        android:text="@string/already_have_an_account_go_to_login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

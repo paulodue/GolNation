@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Assignment3-GroupC"
+rootProject.name = "GolNation"
 include(":app")
- 

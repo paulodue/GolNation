@@ -1,4 +1,4 @@
-package com.example.assignment3_groupc.teams
+package com.example.golnation.teams
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.assignment3_groupc.MainActivity
-import com.example.assignment3_groupc.R
+import com.example.golnation.MainActivity
+import com.example.golnation.R
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
@@ -47,7 +47,29 @@ class RealInfo : AppCompatActivity() {
                 val played = fixtures.getJSONObject("played").getInt("total")
                 val wins = fixtures.getJSONObject("wins").getInt("total")
                 val draws = fixtures.getJSONObject("draws").getInt("total")
-                val loses = fixtures.getJSONObject("loses").getInt("total")
+                val losses = fixtures.getJSONObject("loses").getInt("total")
+
+                val goals = jsonResponse.getJSONObject("response").getJSONObject("goals").getJSONObject("for").getJSONObject("total").getInt("total")
+
+                val timeRanges = listOf(
+                    "0-15", "16-30", "31-45", "46-60",
+                    "61-75", "76-90", "91-105", "106-120"
+                )
+
+                // Extracts card counts for a given type (e.g., "yellow" or "red")
+                fun getCardTotal(jsonResponse: JSONObject, cardType: String): Int {
+                    return timeRanges.sumOf { range ->
+                        jsonResponse.getJSONObject("response")
+                            .getJSONObject("cards")
+                            .getJSONObject(cardType)
+                            .optJSONObject(range)
+                            ?.optInt("total", 0) ?: 0
+                    }
+                }
+
+                val yellowCardsTotal = getCardTotal(jsonResponse, "yellow")
+                val redCardsTotal = getCardTotal(jsonResponse, "red")
+                val totalCards = yellowCardsTotal + redCardsTotal
 
                 runOnUiThread {
                     val realMatchesToXML: TextView = findViewById(R.id.realMatches)
@@ -59,8 +81,14 @@ class RealInfo : AppCompatActivity() {
                     val realDrawsToXML: TextView = findViewById(R.id.realDraws)
                     realDrawsToXML.text = draws.toString()
 
-                    val realLosesToXML: TextView = findViewById(R.id.realLoses)
-                    realLosesToXML.text = loses.toString()
+                    val realLosesToXML: TextView = findViewById(R.id.realLosses)
+                    realLosesToXML.text = losses.toString()
+
+                    val realGoalsToXML: TextView = findViewById(R.id.realGoals)
+                    realGoalsToXML.text = goals.toString()
+
+                    val santosCardsToXML: TextView = findViewById(R.id.realCards)
+                    santosCardsToXML.text = totalCards.toString()
                 }
             }.start()
         }

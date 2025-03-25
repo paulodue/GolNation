@@ -1,7 +1,9 @@
-package com.example.assignment3_groupc
+package com.example.golnation
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.BounceInterpolator
+import android.view.animation.OvershootInterpolator
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -9,9 +11,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.assignment3_groupc.teams.FlaInfo
-import com.example.assignment3_groupc.teams.RealInfo
-import com.example.assignment3_groupc.teams.SantosInfo
+import com.example.golnation.teams.FlaInfo
+import com.example.golnation.teams.RealInfo
+import com.example.golnation.teams.SantosInfo
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -55,5 +57,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FlaInfo::class.java)
             startActivity(intent)
         }
+
+        val welcomeText = findViewById<TextView>(R.id.textView)
+        welcomeText.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(3600)
+            .setInterpolator(BounceInterpolator())
+            .start()
     }
 }

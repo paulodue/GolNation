@@ -9,182 +9,273 @@
     android:background="@color/black"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/footbuddyLogo"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="60dp"
-        android:contentDescription="@string/footbuddy_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/footbuddy" />
-
-    <TextView
-        android:id="@+id/foundationSantos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/foundationSantos"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/santosLogo" />
-
-    <TableLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/foundationSantos"
-        app:layout_constraintVertical_bias="0.004">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/green2"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5sp"
-                android:text="@string/match_history"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="312dp"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:padding="5sp"
-                android:text="Matches"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/santosMatches"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5sp"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/green"
-                android:padding="5sp"
-                android:text="Wins"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/santosWins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5sp"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/grey"
-                android:padding="5sp"
-                android:text="Draws"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/santosDraws"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5sp"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/red"
-                android:padding="5sp"
-                android:text="Loses"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/santosLoses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5sp"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/santosTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/santos_fc"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/santosLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
 
     <ImageView
         android:id="@+id/santosLogo"
         android:layout_width="82dp"
         android:layout_height="78dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/santos_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/footbuddyLogo"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/santos" />
+
+    <TextView
+        android:id="@+id/santosTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/santos_fc"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/foundationSantos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/santosLogo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/foundationSantos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/foundationSantos"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/santosLogo" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foundationSantos">
+
+        <!-- Header Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/match_history"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Stats Rows -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_even">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/matches"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_match" />
+
+            <TextView
+                android:id="@+id/santosMatches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_odd">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/wins"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_win" />
+
+            <TextView
+                android:id="@+id/santosWins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/green_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_even">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/draws"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_draw" />
+
+            <TextView
+                android:id="@+id/santosDraws"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/grey_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_odd">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/losses"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_loss" />
+
+            <TextView
+                android:id="@+id/santosLosses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_even">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/total_goals"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_goals" />
+
+            <TextView
+                android:id="@+id/santosGoals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_row_odd">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="start|center_vertical"
+                android:padding="12dp"
+                android:text="@string/total_cards"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableLeftCompat="@drawable/ic_cards" />
+
+            <TextView
+                android:id="@+id/santosCards"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:padding="12dp"
+                android:text=""
+                android:textColor="@color/red_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:id="@+id/mainMenuBtn"
-        android:layout_width="163dp"
+        android:layout_width="200dp"
         android:layout_height="58dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_button"
         android:text="@string/go_to_main_menu"
         android:textColor="@color/black"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.188" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

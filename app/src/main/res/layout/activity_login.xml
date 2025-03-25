@@ -1,74 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="15dp"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".Login"
-    android:background="@color/black">
+    tools:layout_editor_absoluteX="15dp"
+    tools:layout_editor_absoluteY="-94dp">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="267dp"
-        android:layout_height="187dp"
-        app:srcCompat="@drawable/footbuddy" />
+        android:layout_width="334dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/golNationLogo" />
 
     <TextView
-        android:id="@+id/login_text"
+        android:id="@+id/golNationHeadText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/golnation"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="60dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/email_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/email_edittext"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:hint="@string/email"
-        android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/password_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/golNationHeadText"
+        app:layout_constraintVertical_bias="0.59000003" />
 
     <EditText
         android:id="@+id/password_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="textPassword"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext" />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/loginBtn"
         android:textColor="@color/black"
         app:backgroundTint="@null"
-        android:background = "@drawable/rounded_button"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_edittext" />
 
     <TextView
         android:id="@+id/registerNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="@string/new_here_register_now"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment3-GroupC</string>
+    <string name="app_name">GolNation</string>
     <string name="login">Hi buddy!</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -17,7 +17,7 @@
     <string name="team_informations">Team Informations</string>
     <string name="separationLine">-----------------------------------------------------------------------------------------------------</string>
     <string name="select_an_year">Select an year</string>
-    <string name="match_history">Match history</string>
+    <string name="match_history">Match History - 2024</string>
     <string name="clube_de_regatas_do_flamengo">Clube de Regatas do Flamengo</string>
     <string name="foundationFla">Foundation: 1895</string>
     <string name="foundationSantos">Foundation: 1912</string>
@@ -25,5 +25,16 @@
     <string name="footbuddy_logo">footbuddy Logo</string>
     <string name="real_madrid_club_de_f_tbol">Real Madrid Club de Fútbol</string>
     <string name="api_info">API INFO</string>
-    <string name="go_to_main_menu">Go to Main Menu</string>
+    <string name="go_to_main_menu">Go back to Main Menu</string>
+    <string name="golnation">GolNation</string>
+    <string name="mainPageText">Welcome to GolNation – Your Ultimate Football Hub!\n\nWhich squad are you supporting today?</string>
+    <string name="total_cards">Total Cards</string>
+    <string name="matches">Matches</string>
+    <string name="wins">Wins</string>
+    <string name="draws">Draws</string>
+    <string name="losses">Losses</string>
+    <string name="total_goals">Total Goals</string>
+    <string name="flamengo_logo">Flamengo Logo</string>
+    <string name="santos_logo">Santos logo</string>
+    <string name="real_logo">Real Madrid logo</string>
 </resources>

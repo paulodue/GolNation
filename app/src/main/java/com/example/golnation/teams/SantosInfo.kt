@@ -1,27 +1,25 @@
-package com.example.assignment3_groupc.teams
+package com.example.golnation.teams
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.assignment3_groupc.Login
-import com.example.assignment3_groupc.MainActivity
-import com.example.assignment3_groupc.R
-import com.google.firebase.Firebase
-import com.google.firebase.auth.auth
+import com.example.golnation.MainActivity
+import com.example.golnation.R
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
 class SantosInfo : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_santos_info)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.santosInfo)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -50,7 +48,29 @@ class SantosInfo : AppCompatActivity() {
                     val played = fixtures.getJSONObject("played").getInt("total")
                     val wins = fixtures.getJSONObject("wins").getInt("total")
                     val draws = fixtures.getJSONObject("draws").getInt("total")
-                    val loses = fixtures.getJSONObject("loses").getInt("total")
+                    val losses = fixtures.getJSONObject("loses").getInt("total")
+
+                    val goals = jsonResponse.getJSONObject("response").getJSONObject("goals").getJSONObject("for").getJSONObject("total").getInt("total")
+
+                    val timeRanges = listOf(
+                        "0-15", "16-30", "31-45", "46-60",
+                        "61-75", "76-90", "91-105", "106-120"
+                    )
+
+                    // Extracts card counts for a given type (e.g., "yellow" or "red")
+                    fun getCardTotal(jsonResponse: JSONObject, cardType: String): Int {
+                        return timeRanges.sumOf { range ->
+                            jsonResponse.getJSONObject("response")
+                                .getJSONObject("cards")
+                                .getJSONObject(cardType)
+                                .optJSONObject(range)
+                                ?.optInt("total", 0) ?: 0
+                        }
+                    }
+
+                    val yellowCardsTotal = getCardTotal(jsonResponse, "yellow")
+                    val redCardsTotal = getCardTotal(jsonResponse, "red")
+                    val totalCards = yellowCardsTotal + redCardsTotal
 
                     runOnUiThread {
                         val santosMatchesToXML: TextView = findViewById(R.id.santosMatches)
@@ -62,8 +82,14 @@ class SantosInfo : AppCompatActivity() {
                         val santosDrawsToXML: TextView = findViewById(R.id.santosDraws)
                         santosDrawsToXML.text = draws.toString()
 
-                        val santosLosesToXML: TextView = findViewById(R.id.santosLoses)
-                        santosLosesToXML.text = loses.toString()
+                        val santosLosesToXML: TextView = findViewById(R.id.santosLosses)
+                        santosLosesToXML.text = losses.toString()
+
+                        val santosGoalsToXML: TextView = findViewById(R.id.santosGoals)
+                        santosGoalsToXML.text = goals.toString()
+
+                        val santosCardsToXML: TextView = findViewById(R.id.santosCards)
+                        santosCardsToXML.text = totalCards.toString()
                     }
                 }.start()
             }

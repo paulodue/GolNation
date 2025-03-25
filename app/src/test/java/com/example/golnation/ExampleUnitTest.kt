@@ -1,4 +1,4 @@
-package com.example.assignment3_groupc
+package com.example.golnation
 
 import org.junit.Test
 
